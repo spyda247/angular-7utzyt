@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'my-rental-list',
@@ -7,6 +7,11 @@ import { Component, Input } from '@angular/core';
 })
 export class RentalListComponent  {
   @Input() rentalList;
+  @Output() clearMovies = new EventEmitter().emit();
+
+  onRentalListButtonClicked() {
+    // Inform parent
+  }
 }
 
 /*
