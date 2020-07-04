@@ -32,5 +32,10 @@ export class AppComponent  {
 		"image": "/images/the-room.jpg"
 	}
 
+  onClearMovies() {
+    this.rentalList.count = 0;
+    this.rentalList.titles = '';
+
+  }
 
 }

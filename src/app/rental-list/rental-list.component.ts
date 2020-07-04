@@ -7,10 +7,11 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 })
 export class RentalListComponent  {
   @Input() rentalList;
-  @Output() clearMovies = new EventEmitter().emit();
+  @Output() clearMovies = new EventEmitter();
 
   onRentalListButtonClicked() {
     // Inform parent
+    this.clearMovies.emit()
   }
 }
 
